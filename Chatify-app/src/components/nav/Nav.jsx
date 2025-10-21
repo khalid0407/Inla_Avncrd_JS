@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logoutUser } from "../../services";
-import "./nav.css";
+import "./Nav.css";
 
 function SideNav({ setUser }) {
   const [open, setOpen] = useState(false);
