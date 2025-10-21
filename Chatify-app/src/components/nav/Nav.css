@@ -1,0 +1,61 @@
+/* Use accent colors for hamburger and side nav */
+:root {
+  --accent-1: #7c3aed;
+  --side-bg: #0b1220;
+  --overlay: rgba(2,6,23,0.45);
+}
+
+/* Simple side navigation */
+.hamburger {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 36px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: var(--accent-1);
+  border-radius: 2px;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  z-index: 1000;
+}
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--side-bg), #071020);
+  padding: 20px;
+  box-shadow: 4px 0 18px rgba(2,6,23,0.4);
+  transition: left 0.24s cubic-bezier(.2,.9,.3,1);
+  z-index: 1002;
+}
+.side-nav.open {
+  left: 0;
+}
+.side-nav button {
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent-1), #06b6d4);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.side-nav button:hover {
+  opacity: 0.95;
+}
