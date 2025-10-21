@@ -4,7 +4,7 @@ import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import Chat from "./components/chat/Chat";
 import ProtectedRouted from "./components/route/ProtectedRoute";
-import Nav from "./components/nav/nav";
+import Nav from "./components/nav/Nav";
 
 function App() {
   const [user, setUser] = useState(null);
