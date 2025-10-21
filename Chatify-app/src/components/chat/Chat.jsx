@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DOMPurify from "dompurify";
-import SideNav from "../nav/nav";
+import SideNav from "../nav/Nav";
 import { postMessages, getUserMessages, deleteMessages } from "../../services";
 import { mockMessages } from "../../mocks";
 import "./Chat.css";
