@@ -1,12 +1,3 @@
-// This script removes comments from JS/JSX/CSS/HTML across the repo (excluding node_modules, dist, etc.).
-// How to run - Windows PowerShell/Git Bash:
-//    From the frontend folder:
-//    npm run strip:comments
-//
-//    Or run directly with Node:
-//    node ./scripts/removeComments.mjs
-//
-
 import { promises as fs } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -80,7 +71,7 @@ async function main() {
     if (after !== before) changed += 1;
     const ext = path.extname(file).toLowerCase();
     extCounts.set(ext, (extCounts.get(ext) || 0) + 1);
-    // Simple residual comment heuristic
+   
     if (/\/\//.test(after) || /\/\*/.test(after) || /<!--/.test(after)) {
       stillHasComment.push(path.relative(repoRoot, file));
     }
