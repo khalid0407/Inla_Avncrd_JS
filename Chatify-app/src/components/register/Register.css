@@ -1,4 +1,4 @@
-/* Theme vars (keep in sync with chat theme) */
+
 :root{
   --accent-1: #7c3aed;
   --accent-2: #06b6d4;
@@ -6,7 +6,7 @@
   --muted: #475569;
 }
 
-/* Page background */
+
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
 }
 
-/* Card container */
+
 .register-container {
   width: 100%;
   max-width: 480px;
@@ -29,7 +29,7 @@ body {
   text-align: center;
 }
 
-/* Header */
+
 .register-container h2 {
   margin-bottom: 12px;
   color: #07123b;
@@ -37,7 +37,7 @@ body {
   font-weight: 700;
 }
 
-/* Alerts */
+
 .error {
   color: #9b1c1c;
   background: #fff5f5;
@@ -51,7 +51,7 @@ body {
   border-radius: 10px;
 }
 
-/* Form layout */
+
 form {
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@ form {
   margin-top: 8px;
 }
 
-/* Avatar */
+
 .avatar-container {
   display: flex;
   justify-content: center;
@@ -74,7 +74,7 @@ form {
   border: 3px solid rgba(124,58,237,0.08);
 }
 
-/* Inputs */
+
 input {
   width: 100%;
   padding: 12px 14px;
@@ -89,7 +89,7 @@ input:focus {
   box-shadow: 0 8px 24px rgba(124,58,237,0.06);
 }
 
-/* Button */
+
 button {
   padding: 12px;
   border-radius: 12px;
@@ -104,7 +104,7 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Footer link */
+
 .login-link {
   text-align: center;
   font-size: 14px;
@@ -115,7 +115,7 @@ button:hover {
   font-weight: 600;
 }
 
-/* Mobile tweaks */
+
 @media (max-width: 520px) {
   .register-container {
     margin: 28px 16px;

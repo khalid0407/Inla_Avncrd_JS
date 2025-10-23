@@ -9,7 +9,7 @@ import Nav from "./components/nav/Nav";
 function App() {
   const [user, setUser] = useState(null);
 
-  // Restore user from token on refresh (basic persistence)
+  
   useEffect(() => {
     const token = sessionStorage.getItem("jwtToken") || localStorage.getItem("token");
     if (token && !user) {
@@ -35,7 +35,7 @@ function App() {
           />
         )}
 
-        {/* Fallback: */}
+        {}
         <Route
           path="*"
           element={user ? <Navigate to="/chat" /> : <Navigate to="/register" />}

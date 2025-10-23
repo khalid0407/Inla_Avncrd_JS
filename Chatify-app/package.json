@@ -7,14 +7,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "strip:comments": "node ./scripts/removeComments.mjs",
+    "format:repo": "node ./scripts/formatRepo.mjs"
   },
   "dependencies": {
     "dompurify": "^3.3.0",
+    "fast-glob": "^3.3.3",
     "jwt-decode": "^4.0.0",
+    "prettier": "^3.6.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router-dom": "^7.9.4"
+    "react-router-dom": "^7.9.4",
+    "strip-comments": "^2.0.1",
+    "strip-css-comments": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

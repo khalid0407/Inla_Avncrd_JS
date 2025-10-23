@@ -1,5 +1,3 @@
-// Services for API interactions: CSRF, auth, users, messages
-
 const API_BASE = 'https://chatify-api.up.railway.app';
 
 async function handleError(res, defaultMessage) {
