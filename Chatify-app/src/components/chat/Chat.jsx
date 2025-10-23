@@ -111,15 +111,7 @@ function Chat({ setUser }) {
                   {isUser ? (
                     <>
                       <div className={`message-bubble ${isUser ? "user-message" : "other-message"}`}>
-                        <p
-                          className="message-text"
-                          dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(message.text, {
-                              ALLOWED_TAGS: ["b", "i", "strong", "em", "a"],
-                              ALLOWED_ATTR: ["href"],
-                            }),
-                          }}
-                        />
+                        <p className="message-text">{message.text}</p>
                         <span className="timestamp">{new Date(message.createdAt).toLocaleTimeString()}</span>
                       </div>
                       <button className="delete-btn" onClick={() => handleDeleteMessage(message.id)} aria-label="Delete message" title="Delete message">×</button>
@@ -129,15 +121,7 @@ function Chat({ setUser }) {
                     <>
                       <img src={message.avatar} alt={`${message.username} avatar`} className="avatar" onError={(e) => (e.currentTarget.src = "https://i.pravatar.cc/40")} />
                       <div className={`message-bubble ${isUser ? "user-message" : "other-message"}`}>
-                        <p
-                          className="message-text"
-                          dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(message.text, {
-                              ALLOWED_TAGS: ["b", "i", "strong", "em", "a"],
-                              ALLOWED_ATTR: ["href"],
-                            }),
-                          }}
-                        />
+                        <p className="message-text">{message.text}</p>
                         <span className="timestamp">{new Date(message.createdAt).toLocaleTimeString()}</span>
                       </div>
                     </>
