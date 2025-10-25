@@ -22,23 +22,23 @@ function App() {
   {user && <Nav user={user} setUser={setUser} />}
 
       <Routes>
-        {!user && <Route path="/register" element={<Register />} />}
-        {!user && <Route path="/login" element={<Login setUser={setUser} />} />}
-        {user && (
-          <Route
-            path="/chat"
-            element={
+        <Route path="/register" element={!user ? <Register /> : <Navigate to="/chat" replace />} />
+        <Route path="/login" element={!user ? <Login setUser={setUser} /> : <Navigate to="/chat" replace />} />
+        <Route
+          path="/chat"
+          element={
+            user ? (
               <ProtectedRouted>
                 <Chat user={user} setUser={setUser} />
               </ProtectedRouted>
-            }
-          />
-        )}
-
-        {}
+            ) : (
+              <Navigate to="/register" replace />
+            )
+          }
+        />
         <Route
           path="*"
-          element={user ? <Navigate to="/chat" /> : <Navigate to="/register" />}
+          element={user ? <Navigate to="/chat" replace /> : <Navigate to="/register" replace />}
         />
       </Routes>
     </Router>
