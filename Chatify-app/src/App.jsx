@@ -22,6 +22,10 @@ function App() {
   {user && <Nav user={user} setUser={setUser} />}
 
       <Routes>
+        {/* Upper/lower-case aliases to avoid case sensitivity issues on refresh */}
+        <Route path="/Login" element={<Navigate to="/login" replace />} />
+        <Route path="/Register" element={<Navigate to="/register" replace />} />
+        
         {!user && <Route path="/register" element={<Register />} />}
         {!user && <Route path="/login" element={<Login setUser={setUser} />} />}
         {user && (
